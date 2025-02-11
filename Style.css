@@ -308,7 +308,7 @@ span{
         transition: 0.5s;
         border-left: 3px solid #b74b4b;
         line-height: 3rem;
-        align-items: left;
+        justify-content: space-between;
     }
 
     nav.active {
