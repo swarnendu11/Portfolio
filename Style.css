@@ -34,10 +34,12 @@ header {
     display: flex;
     font-size: 20px;
     height: 100px;
+    position:absolute;
+    left: 20px;
 }
 
 .logo:hover{
-    transform: scale(1.1);
+    transform: translateY(-50%) scale(1.1);
     color: #b74b4b
 }
 
