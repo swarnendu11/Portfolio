@@ -258,7 +258,7 @@ span{
     flex-direction: column;
     cursor: pointer;
     z-index: 1001;
-    position: absolute;
+    position: fixed; /* Changed from absolute to fixed */
     right: 20px;
     top: 20px;
 }
@@ -336,10 +336,10 @@ span{
         font-size: 1rem;
         justify-content: space-between;
         align-items: center;
-
     }
 }
 
+/* Ensure the header is properly aligned */
 header {
     position: fixed;
     top: 0;
