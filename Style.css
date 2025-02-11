@@ -39,7 +39,7 @@ header {
 }
 
 .logo:hover{
-    transform: translateY(-50%) scale(1.1);
+    transform:scale(1.1);
     color: #b74b4b
 }
 
@@ -77,6 +77,16 @@ nav a:hover {
     color: #b74b4b;
     transform: translateY(-5px);
     font-size: 20px;
+}
+
+nav .home {
+    font-size: 20px;    
+}    
+
+@media (max-width: 767px) {
+    nav .home {
+        font-size: 18px;
+    }
 }
 
 
@@ -254,13 +264,26 @@ span{
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .logo {
+        font-size: 18px;
+        height: 80px;
+        left: 15px;
+    }
+    .logo:hover {
+        transform: scale(1.1);
+        color: #b74b4b;
+    }
+}
+
+
 /* Hamburger Menu Styles */
 .hamburger-menu {
     display: none;
     flex-direction: column;
     cursor: pointer;
     z-index: 1001;
-    position: fixed; /* Changed from absolute to fixed */
+    position: fixed;
     right: 20px;
     top: 20px;
 }
@@ -284,13 +307,15 @@ span{
         top: 0;
         right: -100%;
         width: 60%;
-        height: 100vh;
+        height: 30vh;
         background-color: #161616;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transition: 0.5s;
         border-left: 3px solid #b74b4b;
+        line-height: 3rem;
+        align-items: left;
     }
 
     nav.active {
