@@ -83,13 +83,6 @@ nav .home {
     font-size: 20px;    
 }    
 
-@media (max-width: 767px) {
-    nav .home {
-        font-size: 18px;
-    }
-}
-
-
 @media(max-width:900px){
     nav{
         position: absolute;
