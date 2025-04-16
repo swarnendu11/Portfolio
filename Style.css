@@ -55,12 +55,23 @@ header.scrolled {
 }
 
 .logo img {
-    height: 50px;
+    height: 40px;
     transition: transform 0.3s ease;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
 .logo:hover img {
     transform: scale(1.1);
+}
+
+.logo:hover .logo-text {
+    color: var(--primary-color);
 }
 
 nav {
