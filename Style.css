@@ -55,7 +55,7 @@ header.scrolled {
 }
 
 .logo img {
-    height: 40px;
+    height: 50px;
     transition: transform 0.3s ease;
 }
 
@@ -102,6 +102,23 @@ nav a:hover {
 .hamburger-menu {
     display: none;
     cursor: pointer;
+}
+
+.close-menu {
+    display: none;
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.close-menu:hover {
+    color: var(--primary-color);
+    transform: rotate(90deg);
 }
 
 .hamburger-menu span {
@@ -747,6 +764,10 @@ nav a:hover {
         right: 0;
     }
 
+    nav.active ~ .close-menu {
+        display: block;
+    }
+
     nav a {
         font-size: 1.2rem;
         margin: 1rem 0;
@@ -1085,4 +1106,3 @@ html {
         transition: none !important;
     }
 }
-   
