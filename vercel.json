@@ -1,3 +1,9 @@
 {
-  "cleanUrls": true
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/Style.css", "destination": "/style.css" },
+    { "source": "/Script.js", "destination": "/script.js" }
+  ]
 }
