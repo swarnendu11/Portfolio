@@ -1,343 +1,1312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="Style.css">
-    <title>Swarnendu Das - Portfolio</title>
-    <link rel="icon" href="https://res.cloudinary.com/dkwauetdi/image/upload/v1744782509/picofme_-_Copy_Custom_offg9v.png">
+    <title>Swarnendu Das | Full Stack Software Developer Portfolio</title>
+    <meta name="description" content="Professional portfolio of Swarnendu Das - MCA Student, Full-Stack Developer & Software Engineer specializing in Next.js, React, Node.js, Express, and Modern Databases.">
+    <meta name="keywords" content="Swarnendu Das, Software Engineer, Full Stack Developer, Node.js Developer, React, Next.js, Web Developer Portfolio, MCA">
+    <meta name="author" content="Swarnendu Das">
+    <meta name="theme-color" content="#090d16">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Swarnendu Das | Software Developer Portfolio">
+    <meta property="og:description" content="Explore full-stack projects, Node.js & Express backend architecture, React/Next.js applications, and technical skills of Swarnendu Das.">
+    <meta property="og:image" content="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Professional portfolio of Swarnendu Das, Web Developer and Designer">
-    <meta name="theme-color" content="#030712">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1744782509/picofme_-_Copy_Custom_offg9v.png" alt="Logo">
-            <span class="logo-text">Swarnendu Das</span>
+    <!-- Background Ambient Canvas / Grid Glow -->
+    <div class="ambient-glow glow-top" aria-hidden="true"></div>
+    <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+    <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#home" class="logo" id="headerLogo" aria-label="Swarnendu Das Home">
+                <div class="logo-avatar-wrap">
+                    <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png" alt="Swarnendu Das Logo" class="logo-img" id="navLogoImg" onerror="this.src='profile.png'">
+                    <span class="logo-online-badge"></span>
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-name">Swarnendu Das</span>
+                    <span class="logo-title">Software Developer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+                <a href="#home" class="nav-link active" id="navLinkHome"><i class="fas fa-home"></i><span>Home</span></a>
+                <a href="#about" class="nav-link" id="navLinkAbout"><i class="fas fa-user"></i><span>About</span></a>
+                <a href="#skills" class="nav-link" id="navLinkSkills"><i class="fas fa-code"></i><span>Skills</span></a>
+                <a href="#projects" class="nav-link" id="navLinkProjects"><i class="fas fa-layer-group"></i><span>Projects</span></a>
+                <a href="#experience" class="nav-link" id="navLinkExperience"><i class="fas fa-graduation-cap"></i><span>Journey</span></a>
+                <a href="#contact" class="nav-link" id="navLinkContact"><i class="fas fa-paper-plane"></i><span>Contact</span></a>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <!-- Command Palette Shortcut Trigger -->
+                <button class="cmd-trigger-btn header-cmd-btn" id="cmdPaletteOpenBtn" aria-label="Open Command Menu" title="Quick Command Menu (Ctrl+K)">
+                    <i class="fas fa-search"></i>
+                    <span class="cmd-btn-label">Cmd</span>
+                    <kbd>⌘K</kbd>
+                </button>
+
+                <!-- Theme Toggle -->
+                <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light mode" title="Toggle Theme">
+                    <i class="fas fa-moon moon-icon"></i>
+                    <i class="fas fa-sun sun-icon"></i>
+                </button>
+
+                <!-- Quick CV Modal Button -->
+                <button class="btn btn-outline btn-sm cv-btn" id="openCvModalBtn" aria-label="Preview CV">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Resume</span>
+                </button>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="hamburger-menu" id="hamburgerMenu" aria-label="Open mobile menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="close-menu">
-            <i class="fas fa-times"></i>
-        </div>
-        <nav class="nav-menu">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
     </header>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hi, I'm</h3>
-            <h1>Swarnendu Das</h1>
-            <h3>I'm a <span class="typing-text">Web Developer</span></h3>
-            <p>Passionate about creating beautiful and functional web applications. I specialize in front-end development and love turning complex problems into simple, beautiful, and intuitive solutions.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/swarnendu36/" target="_blank" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/swarnendu11" target="_blank" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/swarnendu1122" target="_blank" aria-label="Twitter Profile"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/swarnendu30/" target="_blank" aria-label="Instagram Profile"><i class="fa-brands fa-instagram"></i></a>
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header">
+            <div class="logo">
+                <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png" alt="Swarnendu Das Logo" class="logo-img" id="drawerLogoImg" onerror="this.src='profile.png'">
+                <span class="logo-name">Swarnendu Das</span>
             </div>
-            <div class="home-buttons">
-                <a href="#contact" class="button">Hire me</a>
-                <a href="Swarnendu_das.pdf" download="Swarnendu_das.pdf" class="button">Download CV</a>
+            <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close navigation menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link active"><i class="fas fa-home"></i> Home</a>
+            <a href="#about" class="mobile-nav-link"><i class="fas fa-user"></i> About Me</a>
+            <a href="#skills" class="mobile-nav-link"><i class="fas fa-code"></i> Skills & Tech</a>
+            <a href="#projects" class="mobile-nav-link"><i class="fas fa-layer-group"></i> Featured Projects</a>
+            <a href="#experience" class="mobile-nav-link"><i class="fas fa-graduation-cap"></i> Education & Timeline</a>
+            <a href="#contact" class="mobile-nav-link"><i class="fas fa-paper-plane"></i> Contact Me</a>
+        </div>
+        <div class="mobile-drawer-footer">
+            <a href="Swarnendu_das.pdf" download="Swarnendu_das.pdf" class="btn btn-primary btn-block">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+            <div class="mobile-socials">
+                <a href="https://www.linkedin.com/in/swarnendu36/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/swarnendu11" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/swarnendu1122" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/itz.swarnendu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:swarnendu.1122das@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-        <div class="home-img">
-            <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1744438852/picofme_iqzbgm.png" alt="Swarnendu Das Profile Photo" fetchpriority="high">
-        </div>
-    </section>
+    </div>
 
-    <section class="about" id="about">
-        <h2 class="section-title">About <span>Me</span></h2>
-        <div class="about-container">
-            <div class="about-content">
-                <div class="about-header">
-                    <h3>🌟 Aspiring <span class="highlight">Software Developer</span></h3>
-                    <div class="about-tags">
-                        <span class="tag">MCA Student</span>
-                        <span class="tag">Technology Enthusiast</span>
-                        <span class="tag">Problem Solver</span>
+    <!-- MAIN CONTENT -->
+    <main id="mainContent">
+
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <!-- Status pill -->
+                    <div class="hero-badge">
+                        <span class="pulsing-badge"></span>
+                        <span class="hero-badge-text">Available for Hire & Internships &bull; Kolkata / Remote</span>
                     </div>
+
+                    <!-- Intro greeting -->
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="text-gradient">Swarnendu Das</span>
+                    </h1>
+
+                    <!-- Dynamic Role Typing Subhead -->
+                    <div class="hero-roles-wrap">
+                        <span class="roles-prefix">Building as a</span>
+                        <span class="typing-text-wrapper">
+                            <span class="typing-text" id="typingText">Full Stack Developer</span>
+                            <span class="typing-cursor">|</span>
+                        </span>
+                    </div>
+
+                    <!-- Bio statement tailored for diverse roles -->
+                    <p class="hero-description">
+                        MCA Graduate candidate (2024–2026) at Techno College Hooghly with a unique blend of <strong>full-stack engineering</strong>, <strong>scalable Node.js & Express backend architecture</strong>, and modern <strong>Next.js/React frontend mastery</strong>. Transitioned from communication & journalism to software engineering with a passion for high-performance, intuitive digital products.
+                    </p>
+
+                    <!-- Interactive Job Role Lens Selector -->
+                    <div class="role-lens-selector" id="roleLensSelector">
+                        <span class="role-lens-label"><i class="fas fa-sliders-h"></i> Target Role Lens:</span>
+                        <div class="role-lens-buttons">
+                            <button class="role-lens-btn active" data-role="all" id="roleBtnAll">
+                                <i class="fas fa-globe"></i> All-Rounder
+                            </button>
+                            <button class="role-lens-btn" data-role="fullstack" id="roleBtnFullStack">
+                                <i class="fas fa-layer-group"></i> Full Stack
+                            </button>
+                            <button class="role-lens-btn" data-role="backend" id="roleBtnBackend">
+                                <i class="fas fa-server"></i> Backend &amp; APIs
+                            </button>
+                            <button class="role-lens-btn" data-role="frontend" id="roleBtnFrontend">
+                                <i class="fab fa-react"></i> Frontend / React
+                            </button>
+                            <button class="role-lens-btn" data-role="fresher" id="roleBtnFresher">
+                                <i class="fas fa-user-graduate"></i> SDE Candidate
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Role Dynamic Focus Box -->
+                    <div class="role-focus-banner" id="roleFocusBanner">
+                        <i class="fas fa-info-circle banner-icon"></i>
+                        <span class="banner-text" id="roleBannerText">Showing all technical highlights, full stack web apps, REST APIs, and CS fundamentals.</span>
+                    </div>
+
+                    <!-- Primary CTAs -->
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary btn-lg" id="heroExploreProjectsBtn">
+                            <i class="fas fa-laptop-code"></i> Explore Projects
+                        </a>
+                        <button class="btn btn-secondary btn-lg" id="heroViewCvBtn">
+                            <i class="fas fa-file-alt"></i> View Resume
+                        </button>
+                        <a href="#contact" class="btn btn-ghost btn-lg" id="heroContactBtn">
+                            <i class="fas fa-paper-plane"></i> Get In Touch
+                        </a>
+                    </div>
+
+                    <!-- Social proof / Quick links -->
+                    <div class="hero-social-strip">
+                        <span class="social-strip-label">Connect:</span>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/swarnendu36/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/swarnendu11" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://x.com/swarnendu1122" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter) Profile" title="Twitter / X">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/itz.swarnendu/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram Profile" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <button class="social-icon copy-email-btn" id="quickCopyEmailBtn" title="Copy Email: swarnendu.1122das@gmail.com" aria-label="Copy Email">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Side -->
+                <div class="hero-visual">
+                    <div class="profile-card-wrapper">
+                        <!-- Profile Card -->
+                        <div class="profile-glow-ring"></div>
+                        <div class="profile-card">
+                            <div class="profile-image-container" id="profileImageContainer" title="Drag &amp; drop any of your new photos or click to change">
+                                <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png" alt="Swarnendu Das - Profile Photo" class="profile-img" id="heroProfileImg" fetchpriority="high" onerror="this.src='profile.png'">
+                                <div class="profile-badge-float">
+                                    <i class="fas fa-code"></i>
+                                    <span>Full Stack Engineer</span>
+                                </div>
+                                <button type="button" class="profile-photo-overlay" id="profilePhotoOverlay" aria-label="Change profile photo" title="Click or drop your new photo here to update">
+                                    <i class="fas fa-camera"></i>
+                                    <span>Change Photo</span>
+                                </button>
+                                <input type="file" id="profilePhotoInput" accept="image/*" style="display:none;" aria-label="Upload new profile photo">
+                            </div>
+                            <div class="profile-card-body">
+                                <h3 class="profile-card-name">Swarnendu Das</h3>
+                                <p class="profile-card-role">MCA Candidate &bull; Software Developer</p>
+                                <div class="profile-metrics-grid">
+                                    <div class="metric-item">
+                                        <span class="metric-value">3+</span>
+                                        <span class="metric-label">Full Stack Apps</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-value">12+</span>
+                                        <span class="metric-label">Technologies</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-value">7.69</span>
+                                        <span class="metric-label">MCA CGPA</span>
+                                    </div>
+                                </div>
+                                <div class="profile-quick-actions">
+                                    <a href="mailto:swarnendu.1122das@gmail.com" class="btn btn-outline btn-sm btn-block">
+                                        <i class="fas fa-envelope"></i> swarnendu.1122das@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Code Snippet Widget -->
+                        <div class="floating-tech-card tech-card-top" aria-hidden="true">
+                            <div class="tech-icon-circle node-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="tech-card-info">
+                                <span class="tech-card-title">Node.js &amp; Express</span>
+                                <span class="tech-card-sub">Scalable Backend APIs</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-tech-card tech-card-bottom" aria-hidden="true">
+                            <div class="tech-icon-circle react-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="tech-card-info">
+                                <span class="tech-card-title">React &amp; Next.js</span>
+                                <span class="tech-card-sub">Modern Interactive UI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats Bar -->
+            <div class="hero-stats-bar">
+                <div class="container stats-container">
+                    <div class="stat-box">
+                        <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="stat-text">
+                            <h4>Techno College Hooghly</h4>
+                            <p>Master of Computer Applications (2024–2026)</p>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+                        <div class="stat-text">
+                            <h4>Full-Stack Capabilities</h4>
+                            <p>Node.js, Express, MongoDB, Next.js & Tailwind</p>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <div class="stat-icon"><i class="fas fa-database"></i></div>
+                        <div class="stat-text">
+                            <h4>Backend Focus</h4>
+                            <p>Node.js, Express, MySQL & REST Architecture</p>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-box">
+                        <div class="stat-icon"><i class="fas fa-bullhorn"></i></div>
+                        <div class="stat-text">
+                            <h4>Unique Background</h4>
+                            <p>BJMC Journalism &bull; High Communication & Logic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Get to know me</span>
+                    <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+                    <p class="section-lead">A dedicated software craftsman bridging rigorous engineering with strong creative communication.</p>
                 </div>
 
                 <div class="about-grid">
-                    <div class="about-text">
-                        <p class="about-description">Hello! I'm passionate about software development currently pursuing my MCA at Techno India Hooghly. With a strong foundation in programming and a keen interest in full-stack development, I've honed my skills in React and am now shifting my focus to Java-based backend development with Spring Boot. My journey in technology began with a Bachelor of Journalism and Mass Communication (BJMC), and since then, I've tackled diverse projects that challenge my problem-solving abilities and fuel my creativity. 🚀</p>
-                        
-                        <div class="feature-box">
-                            <div class="feature-icon">❤️</div>
-                            <div class="feature-content">
-                                <h4>Passionate About Java</h4>
-                                <p>I have developed a deep love for Java and enjoy building scalable and efficient backend systems. As I transition to Spring Boot and MySQL, I am eager to master backend architecture and contribute to powerful, high-performance applications.</p>
+                    <!-- Bio Narrative Column -->
+                    <div class="about-narrative-card">
+                        <div class="about-narrative-header">
+                            <div class="avatar-badge">
+                                <i class="fas fa-sparkles"></i>
+                            </div>
+                            <div>
+                                <h3 class="narrative-headline">Aspiring Software Engineer & Full-Stack Architect</h3>
+                                <div class="badge-row">
+                                    <span class="pill-badge"><i class="fas fa-university"></i> MCA Student</span>
+                                    <span class="pill-badge"><i class="fas fa-microchip"></i> Tech Enthusiast</span>
+                                    <span class="pill-badge"><i class="fas fa-brain"></i> Problem Solver</span>
+                                    <span class="pill-badge"><i class="fas fa-comments"></i> Strong Communicator</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="feature-box">
-                            <div class="feature-icon">🔍</div>
-                            <div class="feature-content">
-                                <h4>What I'm Learning</h4>
-                                <p>As a student, I'm focused on building a solid foundation in backend development, especially with Java and Spring Boot. I enjoy working on personal projects and academic assignments that challenge my problem-solving skills and allow me to experiment with new technologies. Whether it's diving into full-stack development or exploring the potential of AI and machine learning, I'm always eager to expand my knowledge and grow as a developer. 💻✨</p>
+                        <div class="about-text-content">
+                            <p>
+                                Hello! I am a software developer currently pursuing my <strong>Master of Computer Applications (MCA)</strong> at Techno College Hooghly (CGPA: 7.69). With a solid foundation in programming and computer science principles, I build end-to-end web applications with clean, scalable, and maintainable architectures.
+                            </p>
+                            <p>
+                                Having honed my frontend expertise in <strong>React, Next.js, and TypeScript</strong>, I have expanded deeply into <strong>Node.js &amp; Express backend development, REST APIs, MySQL, and modern database architectures</strong>.
+                            </p>
+                            <p>
+                                My journey into technology is distinct: I initially graduated with a <strong>Bachelor of Journalism and Mass Communication (BJMC)</strong> from Chandigarh University. This interdisciplinary foundation empowers me with exceptional technical storytelling, cross-functional collaboration, clear documentation, and user-first empathy that sets me apart in any engineering team.
+                            </p>
+                        </div>
+
+                        <!-- Highlights Grid -->
+                        <div class="about-highlights-grid">
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-server"></i></div>
+                                <div class="highlight-content">
+                                    <h4>Passionate About Scalable Backend Systems</h4>
+                                    <p>Deep appreciation for modular APIs, asynchronous programming, robust middleware, and relational database modeling with MySQL &amp; MongoDB.</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-rocket"></i></div>
+                                <div class="highlight-content">
+                                    <h4>Full-Stack Execution</h4>
+                                    <p>Hands-on building responsive, production-ready apps with Next.js, Clerk authentication, RESTful APIs, and MongoDB/PostgreSQL.</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-lightbulb"></i></div>
+                                <div class="highlight-content">
+                                    <h4>Continuous Learning & Adaptability</h4>
+                                    <p>Constantly exploring modern developer workflows, Docker containerization, system design patterns, and AI-assisted tooling.</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon"><i class="fas fa-handshake"></i></div>
+                                <div class="highlight-content">
+                                    <h4>Collaborative & Team-Ready</h4>
+                                    <p>Experienced in team-based Git workflows, agile sprint coordination, and turning business requirements into working software.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Side Specs Card / Quick Facts -->
+                    <div class="about-sidebar">
+                        <div class="spec-card">
+                            <h3 class="spec-card-title"><i class="fas fa-id-card"></i> Candidate Summary</h3>
+                            <ul class="spec-list">
+                                <li class="spec-item">
+                                    <span class="spec-key">Name:</span>
+                                    <span class="spec-val">Swarnendu Das</span>
+                                </li>
+                                <li class="spec-item">
+                                    <span class="spec-key">Current Program:</span>
+                                    <span class="spec-val">MCA (2024–2026)</span>
+                                </li>
+                                <li class="spec-item">
+                                    <span class="spec-key">University/College:</span>
+                                    <span class="spec-val">Techno College Hooghly</span>
+                                </li>
+                                <li class="spec-item">
+                                    <span class="spec-key">Academic CGPA:</span>
+                                    <span class="spec-val highlight-val">7.69 / 10.0</span>
+                                </li>
+                                <li class="spec-item">
+                                    <span class="spec-key">Location:</span>
+                                    <span class="spec-val">Kolkata, West Bengal, India</span>
+                                </li>
+                                <li class="spec-item">
+                                    <span class="spec-key">Relocation / Remote:</span>
+                                    <span class="spec-val">Open to Remote, Hybrid & Relocation</span>
+                                </li>
+                                <li class="spec-item">
+                                    <span class="spec-key">Primary Focus:</span>
+                                    <span class="spec-val">Full Stack, Node.js Backend, SDE</span>
+                                </li>
+                                <li class="spec-item">
+                                    <span class="spec-key">Languages:</span>
+                                    <span class="spec-val">English, Bengali, Hindi</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="spec-action-group">
+                                <a href="Swarnendu_das.pdf" download="Swarnendu_das.pdf" class="btn btn-primary btn-block">
+                                    <i class="fas fa-download"></i> Download Full CV
+                                </a>
+                                <button class="btn btn-outline btn-block" id="aboutPreviewResumeBtn">
+                                    <i class="fas fa-eye"></i> Quick Preview Resume
+                                </button>
                             </div>
                         </div>
 
-                        <div class="feature-box">
-                            <div class="feature-icon">💡</div>
-                            <div class="feature-content">
-                                <h4>My Goals</h4>
-                                <p>I'm eager to contribute to dynamic teams and work on projects that push the boundaries of technology. I believe in continuous learning and am always looking to expand my skill set! 🌱📚</p>
+                        <!-- What I Bring to Your Team Card -->
+                        <div class="value-prop-card">
+                            <h4><i class="fas fa-check-circle text-success"></i> Why Hire Me?</h4>
+                            <ul class="value-prop-list">
+                                <li><i class="fas fa-check"></i> <strong>Dual Skillset:</strong> Frontend design finesse + backend architectural rigor.</li>
+                                <li><i class="fas fa-check"></i> <strong>Fast Ramp-up:</strong> Proven ability to quickly master new frameworks & paradigms.</li>
+                                <li><i class="fas fa-check"></i> <strong>Clean Code Mindset:</strong> Adherence to SOLID principles, DRY, and modular design.</li>
+                                <li><i class="fas fa-check"></i> <strong>Zero Communication Gap:</strong> Articulate, clear, and proactive team contributor.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS MATRIX SECTION -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Technical Arsenal</span>
+                    <h2 class="section-title">Skills &amp; <span class="text-gradient">Proficiencies</span></h2>
+                    <p class="section-lead">Curated capabilities spanning frontend interfaces, scalable backend systems, databases, and engineering workflows.</p>
+                </div>
+
+                <!-- Skill Filter Tabs -->
+                <div class="skills-filter-nav" id="skillsFilterNav">
+                    <button class="skill-tab active" data-skill-cat="all" id="skillTabAll">
+                        <i class="fas fa-cubes"></i> All Skills
+                    </button>
+                    <button class="skill-tab" data-skill-cat="backend" id="skillTabBackend">
+                        <i class="fas fa-server"></i> Backend &amp; APIs
+                    </button>
+                    <button class="skill-tab" data-skill-cat="frontend" id="skillTabFrontend">
+                        <i class="fab fa-react"></i> Frontend &amp; UI
+                    </button>
+                    <button class="skill-tab" data-skill-cat="database" id="skillTabDatabase">
+                        <i class="fas fa-database"></i> Databases &amp; API
+                    </button>
+                    <button class="skill-tab" data-skill-cat="tools" id="skillTabTools">
+                        <i class="fas fa-tools"></i> Tools &amp; CS Core
+                    </button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-matrix-grid" id="skillsMatrixGrid">
+                    
+                    <!-- Backend & Server Group -->
+                    <div class="skill-category-card" data-category="backend">
+                        <div class="cat-header">
+                            <div class="cat-icon node-cat-icon"><i class="fab fa-node-js"></i></div>
+                            <div>
+                                <h3 class="cat-title">Backend &amp; Server Ecosystem</h3>
+                                <p class="cat-sub">Robust server architectures &amp; microservices</p>
                             </div>
                         </div>
+                        <div class="skills-pill-grid">
+                            <div class="skill-badge-item" data-proficiency="Advanced">
+                                <div class="skill-badge-top">
+                                    <i class="fab fa-node-js"></i>
+                                    <span class="skill-name">Node.js</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 88%"></span></div>
+                                <span class="skill-level">Async Event Loop, Server Runtimes, Modules</span>
+                            </div>
 
-                        <div class="feature-box">
-                            <div class="feature-icon">🤝</div>
-                            <div class="feature-content">
-                                <h4>Let's Connect</h4>
-                                <p>I'm excited to connect with fellow tech enthusiasts, industry professionals, and anyone passionate about shaping the future of technology. Feel free to reach out! 💬💖</p>
+                            <div class="skill-badge-item" data-proficiency="Advanced">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-server"></i>
+                                    <span class="skill-name">Express.js</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 88%"></span></div>
+                                <span class="skill-level">Routing, Middleware, Auth &amp; Controllers</span>
+                            </div>
+
+                            <div class="skill-badge-item" data-proficiency="Advanced">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span class="skill-name">RESTful Architecture</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 90%"></span></div>
+                                <span class="skill-level">CRUD, Status Codes, JSON Payloads</span>
+                            </div>
+
+                            <div class="skill-badge-item" data-proficiency="Intermediate">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span class="skill-name">Authentication &amp; Security</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 85%"></span></div>
+                                <span class="skill-level">JWT, Clerk Auth, OAuth2, Bcrypt, RBAC</span>
+                            </div>
+
+                            <div class="skill-badge-item" data-proficiency="Intermediate">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-cogs"></i>
+                                    <span class="skill-name">API Optimization</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 80%"></span></div>
+                                <span class="skill-level">Rate Limiting, Error Handling, CORS</span>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="education-section">
-                    <h3>Education & <span class="highlight">Experience</span></h3>
-                    <div class="education-timeline">
-                        <div class="education-item">
-                            <div class="education-date">2024 - 2026</div>
-                            <h4>Master of Computer Applications</h4>
-                            <p>Techno College Hooghly</p>
-                            <p class="education-focus">CGPA: 7.69</p>
+                    <!-- Frontend & UI Group -->
+                    <div class="skill-category-card" data-category="frontend">
+                        <div class="cat-header">
+                            <div class="cat-icon react-cat-icon"><i class="fab fa-react"></i></div>
+                            <div>
+                                <h3 class="cat-title">Frontend &amp; User Experience</h3>
+                                <p class="cat-sub">High-fidelity responsive client engineering</p>
+                            </div>
                         </div>
+                        <div class="skills-pill-grid">
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fab fa-react"></i>
+                                    <span class="skill-name">React.js</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 90%"></span></div>
+                                <span class="skill-level">Hooks, Context API, Virtual DOM</span>
+                            </div>
 
-                        <div class="education-item">
-                            <div class="education-date">2018 - 2021</div>
-                            <h4>Bachelor of Journalism and Mass Communication</h4>
-                            <p>Chandigarh University</p>
-                            <p>CGPA: 5.98</p>
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-layer-group"></i>
+                                    <span class="skill-name">Next.js</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 82%"></span></div>
+                                <span class="skill-level">SSR, App Router, Server Actions</span>
+                            </div>
+
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fab fa-js"></i>
+                                    <span class="skill-name">JavaScript (ES6+)</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 90%"></span></div>
+                                <span class="skill-level">Async/Await, Promises, Closures, DOM</span>
+                            </div>
+
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-code"></i>
+                                    <span class="skill-name">TypeScript</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 78%"></span></div>
+                                <span class="skill-level">Type Safety, Interfaces, Generics</span>
+                            </div>
+
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <span class="skill-name">Tailwind CSS</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 92%"></span></div>
+                                <span class="skill-level">Utility-First, Responsive, Theming</span>
+                            </div>
+
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fab fa-html5"></i>
+                                    <span class="skill-name">HTML5 &amp; CSS3</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 95%"></span></div>
+                                <span class="skill-level">Semantic Tags, Flexbox, CSS Grid</span>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="education-item">
-                            <div class="education-date">2016 - 2018</div>
-                            <h4>Higher Secondary</h4>
-                            <p>Chandernagore Sri Aurobindo Vidyamandir</p>
-                            <p>Percentage: 67%</p>
+                    <!-- Database & APIs Group -->
+                    <div class="skill-category-card" data-category="database">
+                        <div class="cat-header">
+                            <div class="cat-icon db-cat-icon"><i class="fas fa-database"></i></div>
+                            <div>
+                                <h3 class="cat-title">Databases &amp; REST Services</h3>
+                                <p class="cat-sub">Data schemas, storage &amp; communication</p>
+                            </div>
                         </div>
+                        <div class="skills-pill-grid">
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-leaf"></i>
+                                    <span class="skill-name">MongoDB</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 86%"></span></div>
+                                <span class="skill-level">Mongoose, Aggregation, Schemas</span>
+                            </div>
 
-                        <div class="education-item">
-                            <div class="education-date">2016</div>
-                            <h4>Secondary</h4>
-                            <p>Elite Co-Ed School, Bandel</p>
-                            <p>Percentage: 52%</p>
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-database"></i>
+                                    <span class="skill-name">MySQL &amp; SQL</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 80%"></span></div>
+                                <span class="skill-level">Relational Modeling, Joins, Indexing</span>
+                            </div>
+
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span class="skill-name">RESTful APIs</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 90%"></span></div>
+                                <span class="skill-level">CRUD, Status Codes, JSON Payloads</span>
+                            </div>
+
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-vial"></i>
+                                    <span class="skill-name">Postman</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 88%"></span></div>
+                                <span class="skill-level">API Testing, Collections, Environments</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & CS Fundamentals Group -->
+                    <div class="skill-category-card" data-category="tools">
+                        <div class="cat-header">
+                            <div class="cat-icon tools-cat-icon"><i class="fas fa-tools"></i></div>
+                            <div>
+                                <h3 class="cat-title">Tools &amp; CS Fundamentals</h3>
+                                <p class="cat-sub">DevOps essentials and core foundations</p>
+                            </div>
+                        </div>
+                        <div class="skills-pill-grid">
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fab fa-git-alt"></i>
+                                    <span class="skill-name">Git &amp; GitHub</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 88%"></span></div>
+                                <span class="skill-level">Branching, PRs, Merge, Collaboration</span>
+                            </div>
+
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-bolt"></i>
+                                    <span class="skill-name">Vite</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 85%"></span></div>
+                                <span class="skill-level">Modern Bundler &amp; Build Tooling</span>
+                            </div>
+
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-brain"></i>
+                                    <span class="skill-name">Data Structures &amp; OOPs</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 80%"></span></div>
+                                <span class="skill-level">Arrays, Stacks, Trees, Polymorphism</span>
+                            </div>
+
+                            <div class="skill-badge-item">
+                                <div class="skill-badge-top">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span class="skill-name">Vercel &amp; Cloud Deploy</span>
+                                </div>
+                                <div class="skill-meter"><span style="width: 85%"></span></div>
+                                <span class="skill-level">CI/CD, Domain Setup, Cloud Config</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS SECTION -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Real-World Execution</span>
+                    <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                    <p class="section-lead">Explore full-stack platforms, hospital management systems, logistics dashboards, and backend services.</p>
+                </div>
+
+                <!-- Projects Controls: Filter + Search -->
+                <div class="projects-toolbar">
+                    <div class="project-filters" id="projectFilters">
+                        <button class="proj-filter-btn active" data-filter="all" id="projFilterAll">
+                            <i class="fas fa-th-large"></i> All (<span id="allCount">3</span>)
+                        </button>
+                        <button class="proj-filter-btn" data-filter="fullstack" id="projFilterFullstack">
+                            <i class="fas fa-layer-group"></i> Full Stack
+                        </button>
+                        <button class="proj-filter-btn" data-filter="backend" id="projFilterBackend">
+                            <i class="fas fa-server"></i> Node / Backend
+                        </button>
+                        <button class="proj-filter-btn" data-filter="frontend" id="projFilterFrontend">
+                            <i class="fab fa-react"></i> Frontend / React
+                        </button>
+                    </div>
+
+                    <div class="project-search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="projectSearchInput" placeholder="Search by tech or title (e.g. Next.js, Mongo)..." aria-label="Search Projects">
+                    </div>
+                </div>
+
+                <!-- Projects Cards Grid -->
+                <div class="projects-grid" id="projectsGrid">
+
+                    <!-- Project Card 1: Joblix -->
+                    <article class="project-card" data-category="fullstack" data-tech="next.js tailwind css clerk typescript react fullstack authentication jobs">
+                        <div class="project-image-wrap">
+                            <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1775446078/Screenshot_2026-04-06_085151_xxwcvm.png" alt="Joblix Job Portal Interface" class="project-img" loading="lazy">
+                            <div class="project-category-badge">Full Stack Portal</div>
+                            <div class="project-overlay">
+                                <a href="https://joblix.vercel.app/" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="Live Preview">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/swarnendu11/joblix" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="GitHub Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="overlay-btn project-detail-btn" data-project-id="joblix" title="Deep Dive Case Study">
+                                    <i class="fas fa-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header-row">
+                                <h3 class="project-title">Joblix &mdash; Modern Job Portal Platform</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-desc">
+                                End-to-end full-stack hiring portal engineered with Next.js, Clerk authentication, and Tailwind CSS. Features seamless job seeker workflows, employer posting dashboards, and real-time application pipelines.
+                            </p>
+                            
+                            <div class="project-highlights">
+                                <span><i class="fas fa-check text-success"></i> Role-Based Auth via Clerk</span>
+                                <span><i class="fas fa-check text-success"></i> Responsive Next.js SSR / App Router</span>
+                            </div>
+
+                            <div class="project-tags">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Clerk Auth</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Vercel</span>
+                            </div>
+
+                            <div class="project-footer">
+                                <a href="https://joblix.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/swarnendu11/joblix" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <button class="btn btn-ghost btn-sm project-detail-btn" data-project-id="joblix">
+                                    Case Study &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2: Novacare -->
+                    <article class="project-card" data-category="backend fullstack" data-tech="node.js express.js mongodb rest api hospital healthcare rbac fullstack backend">
+                        <div class="project-image-wrap">
+                            <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1782711096/Screenshot_2026-06-29_105235_mfqyox.png" alt="Novacare Hospital Management Dashboard" class="project-img" loading="lazy">
+                            <div class="project-category-badge">Healthcare &bull; Backend/Fullstack</div>
+                            <div class="project-overlay">
+                                <a href="https://novacare-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="Live Preview">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/swarnendu11/novacare" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="GitHub Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="overlay-btn project-detail-btn" data-project-id="novacare" title="Deep Dive Case Study">
+                                    <i class="fas fa-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header-row">
+                                <h3 class="project-title">Novacare &mdash; Hospital Management System</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-desc">
+                                Collaborative full-stack hospital operating system built with Node.js, Express.js, and MongoDB. Engineered multi-role dashboards (Admin, Doctor, Patient), secure JWT appointment scheduling, and patient record tracking.
+                            </p>
+
+                            <div class="project-highlights">
+                                <span><i class="fas fa-check text-success"></i> Team Collaborative Architecture</span>
+                                <span><i class="fas fa-check text-success"></i> Robust REST APIs &amp; MongoDB Schemas</span>
+                            </div>
+
+                            <div class="project-tags">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">REST APIs</span>
+                                <span class="tech-tag">RBAC</span>
+                            </div>
+
+                            <div class="project-footer">
+                                <a href="https://novacare-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/swarnendu11/novacare" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <button class="btn btn-ghost btn-sm project-detail-btn" data-project-id="novacare">
+                                    Case Study &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3: Shiftly -->
+                    <article class="project-card" data-category="frontend fullstack" data-tech="vite tailwind css node.js react logistics shipment tracking rest api frontend">
+                        <div class="project-image-wrap">
+                            <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1782711096/Screenshot_2026-06-29_105112_wdqwut.png" alt="Shiftly Logistics Management" class="project-img" loading="lazy">
+                            <div class="project-category-badge">Logistics &bull; Frontend/Vite</div>
+                            <div class="project-overlay">
+                                <a href="https://shiftly-pearl.vercel.app/" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="Live Preview">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/swarnendu11/shiftly" target="_blank" rel="noopener noreferrer" class="overlay-btn" title="GitHub Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="overlay-btn project-detail-btn" data-project-id="shiftly" title="Deep Dive Case Study">
+                                    <i class="fas fa-info"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-header-row">
+                                <h3 class="project-title">Shiftly &mdash; Logistics &amp; Shipment Hub</h3>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <p class="project-desc">
+                                Modern logistics management system frontend created with Vite and Tailwind CSS. Provides intuitive parcel dispatch tracking, driver route metrics, responsive dashboards, and clean REST API integrations.
+                            </p>
+
+                            <div class="project-highlights">
+                                <span><i class="fas fa-check text-success"></i> Lightning Fast Vite Build Pipeline</span>
+                                <span><i class="fas fa-check text-success"></i> Real-Time Shipment Status Dashboards</span>
+                            </div>
+
+                            <div class="project-tags">
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Node.js API</span>
+                                <span class="tech-tag">UI/UX</span>
+                            </div>
+
+                            <div class="project-footer">
+                                <a href="https://shiftly-pearl.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="https://github.com/swarnendu11/shiftly" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <button class="btn btn-ghost btn-sm project-detail-btn" data-project-id="shiftly">
+                                    Case Study &rarr;
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- More Repos CTA Box -->
+                <div class="more-projects-banner">
+                    <div class="banner-inner">
+                        <div class="banner-left">
+                            <i class="fab fa-github git-large-icon"></i>
+                            <div>
+                                <h3>Explore More Code on GitHub</h3>
+                                <p>Discover additional full-stack applications, algorithms, and backend systems on my GitHub profile.</p>
+                            </div>
+                        </div>
+                        <a href="https://github.com/swarnendu11?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+                            <span>Browse All Repositories</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION & JOURNEY TIMELINE -->
+        <section class="section timeline-section" id="experience">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Academic &amp; Professional Growth</span>
+                    <h2 class="section-title">Education &amp; <span class="text-gradient">Milestones</span></h2>
+                    <p class="section-lead">A trajectory defined by continuous academic performance, engineering rigor, and multi-disciplinary versatility.</p>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-track"></div>
+
+                    <!-- Item 1: MCA -->
+                    <div class="timeline-card">
+                        <div class="timeline-dot">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-badge-row">
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2024 &mdash; 2026 (Pursuing)</span>
+                                <span class="badge-grade">CGPA: 7.69 / 10.0</span>
+                            </div>
+                            <h3 class="timeline-title">Master of Computer Applications (MCA)</h3>
+                            <h4 class="timeline-org"><i class="fas fa-university"></i> Techno College Hooghly &bull; MAKAUT Affiliated</h4>
+                            <p class="timeline-desc">
+                                Specialized in Full-Stack Web Technologies, Object-Oriented Software Engineering, Data Structures &amp; Algorithms, Database Management Systems (DBMS), and Operating Systems. Actively leading project teams and backend architecture initiatives.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Full Stack Web</span>
+                                <span>Node.js &amp; Express</span>
+                                <span>DBMS &amp; SQL</span>
+                                <span>Data Structures</span>
+                                <span>REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: BJMC -->
+                    <div class="timeline-card">
+                        <div class="timeline-dot">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-badge-row">
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2018 &mdash; 2021</span>
+                                <span class="badge-grade">CGPA: 5.98</span>
+                            </div>
+                            <h3 class="timeline-title">Bachelor of Journalism &amp; Mass Communication</h3>
+                            <h4 class="timeline-org"><i class="fas fa-university"></i> Chandigarh University</h4>
+                            <p class="timeline-desc">
+                                Developed strong analytical abilities, media literacy, digital communication, public address, and user psychology. This unique pedigree fuels clear code documentation, client empathy, and seamless cross-functional team leadership in engineering settings.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Technical Communication</span>
+                                <span>Problem Solving</span>
+                                <span>Storytelling</span>
+                                <span>Media &amp; User Empathy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Higher Secondary -->
+                    <div class="timeline-card">
+                        <div class="timeline-dot">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-badge-row">
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2016 &mdash; 2018</span>
+                                <span class="badge-grade">Score: 67%</span>
+                            </div>
+                            <h3 class="timeline-title">Higher Secondary Education (Class XII)</h3>
+                            <h4 class="timeline-org"><i class="fas fa-landmark"></i> Chandernagore Sri Aurobindo Vidyamandir</h4>
+                            <p class="timeline-desc">
+                                Completed higher secondary schooling with a focus on core academics, analytical thinking, and foundational scientific principles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Secondary -->
+                    <div class="timeline-card">
+                        <div class="timeline-dot">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-badge-row">
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2016</span>
+                                <span class="badge-grade">Score: 52%</span>
+                            </div>
+                            <h3 class="timeline-title">Secondary Education (Class X)</h3>
+                            <h4 class="timeline-org"><i class="fas fa-school"></i> Elite Co-Ed School, Bandel</h4>
+                            <p class="timeline-desc">
+                                Established primary foundations in mathematics, science, language, and computing.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Let's Connect &amp; Build</span>
+                    <h2 class="section-title">Get in <span class="text-gradient">Touch</span></h2>
+                    <p class="section-lead">Whether you have a job opening, internship opportunity, freelance project, or just want to discuss software engineering, my inbox is always open!</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Cards / Social Details -->
+                    <div class="contact-info-column">
+                        <div class="contact-card-modern">
+                            <h3>Contact Information</h3>
+                            <p>Feel free to reach out via email, phone, or any of the social channels below. I respond promptly!</p>
+
+                            <div class="contact-details-list">
+                                <!-- Email Item -->
+                                <div class="contact-item-box">
+                                    <div class="item-icon-wrap"><i class="fas fa-envelope"></i></div>
+                                    <div class="item-text-wrap">
+                                        <span class="item-label">Email Address</span>
+                                        <a href="mailto:swarnendu.1122das@gmail.com" class="item-value">swarnendu.1122das@gmail.com</a>
+                                    </div>
+                                    <button class="copy-btn" id="copyEmailContactBtn" title="Copy to clipboard" aria-label="Copy email address">
+                                        <i class="far fa-copy"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Phone Item -->
+                                <div class="contact-item-box">
+                                    <div class="item-icon-wrap"><i class="fas fa-phone-alt"></i></div>
+                                    <div class="item-text-wrap">
+                                        <span class="item-label">Phone &amp; WhatsApp</span>
+                                        <a href="tel:+918478900839" class="item-value">+91 8478900839</a>
+                                    </div>
+                                    <a href="https://wa.me/918478900839" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Chat on WhatsApp" aria-label="WhatsApp chat">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+
+                                <!-- Location Item -->
+                                <div class="contact-item-box">
+                                    <div class="item-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="item-text-wrap">
+                                        <span class="item-label">Current Location</span>
+                                        <span class="item-value">Kolkata, West Bengal, India</span>
+                                    </div>
+                                </div>
+
+                                <!-- Availability Item -->
+                                <div class="contact-item-box">
+                                    <div class="item-icon-wrap"><i class="fas fa-calendar-check"></i></div>
+                                    <div class="item-text-wrap">
+                                        <span class="item-label">Availability</span>
+                                        <span class="item-value text-success font-medium">Immediate / 2026 Batch Graduate</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-social-bar">
+                                <span class="social-bar-title">Connect on Socials:</span>
+                                <div class="social-links-row">
+                                    <a href="https://www.linkedin.com/in/swarnendu36/" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="LinkedIn">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://github.com/swarnendu11" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://x.com/swarnendu1122" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="Twitter">
+                                        <i class="fab fa-x-twitter"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/itz.swarnendu/" target="_blank" rel="noopener noreferrer" class="contact-social-btn" aria-label="Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Column -->
+                    <div class="contact-form-column">
+                        <div class="contact-form-card">
+                            <h3>Send a Message</h3>
+                            <p>Fill out the details below and I'll get back to you within 24 hours.</p>
+
+                            <form class="interactive-contact-form" id="contactForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contactName" class="form-label">Your Name <span class="required">*</span></label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fas fa-user input-icon"></i>
+                                            <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. Alex Morgan" required autocomplete="name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contactEmail" class="form-label">Your Email <span class="required">*</span></label>
+                                        <div class="input-icon-wrap">
+                                            <i class="fas fa-envelope input-icon"></i>
+                                            <input type="email" id="contactEmail" name="email" class="form-control" placeholder="e.g. alex@company.com" required autocomplete="email">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contactSubject" class="form-label">Subject / Inquiry Type</label>
+                                    <div class="input-icon-wrap">
+                                        <i class="fas fa-tag input-icon"></i>
+                                        <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="e.g. Job Opportunity / Full Stack SDE Role">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contactMessage" class="form-label">Your Message <span class="required">*</span></label>
+                                    <div class="input-icon-wrap textarea-wrap">
+                                        <textarea id="contactMessage" name="message" class="form-control" rows="5" placeholder="Hi Swarnendu, I saw your portfolio and would like to connect regarding..." required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-submit-row">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="contactSubmitBtn">
+                                        <i class="fas fa-paper-plane"></i> Send Message
+                                    </button>
+                                </div>
+                                <div class="form-status" id="formStatusMsg" style="display: none;"></div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="projects-section" id="projects">
-        <h2 class="section-title">My <span>Projects</span></h2>
-        <div class="projects-grid">
-            <!-- Project Card 4 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1775446078/Screenshot_2026-04-06_085151_xxwcvm.png" alt="Joblix Job Portal Project" loading="lazy">
-                </div>
-                <div class="project-content">
-                    <h2 class="project-title">Joblix</h2>
-                    <p class="project-description">Full stack job portal with secure authentication, job listings, and application workflows. Built with Next.js, Tailwind CSS, and Clerk for responsive user management.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">Clerk</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://joblix.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="https://github.com/swarnendu11/joblix" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
-                </div>
-            </div>
+    </main>
 
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1782711096/Screenshot_2026-06-29_105235_mfqyox.png" alt="Novacare Project" loading="lazy">
-                </div>
-                <div class="project-content">
-                    <h2 class="project-title">Novacare</h2>
-                    <p class="project-description">Built a full-stack Hospital Management System in a team using Node.js, Express.js, and MongoDB. Developed role-based dashboards, authentication, appointment management, and integrated REST APIs.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://novacare-frontend.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="https://github.com/swarnendu11/novacare" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project Card 2 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1782711096/Screenshot_2026-06-29_105112_wdqwut.png" alt="Shiftly Project" loading="lazy">
-                </div>
-                <div class="project-content">
-                    <h2 class="project-title">Shiftly</h2>
-                    <p class="project-description">Developed the frontend of a logistics management system using Vite and Tailwind CSS. Built responsive dashboards and integrated REST APIs for shipment and order tracking.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Vite</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">Node.js</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://shiftly-pearl.vercel.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="https://github.com/swarnendu11/shiftly" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="more-projects">
-            <a href="https://github.com/swarnendu11?tab=repositories" target="_blank" class="button">More Projects <i class="fab fa-github"></i></a>
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2 class="section-title">My <span>Important Skills</span></h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Backend & Fullstack</h3>
-                <div class="skill-items">
-                    <div class="skill-item">
-                        <i class="fab fa-node-js"></i>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-server"></i>
-                        <span>Express.js</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database"></i>
-                        <span>MongoDB</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <span>Next.js</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-code"></i>
-                        <span>TypeScript</span>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Frontend Development</h3>
-                <div class="skill-items">
-                    <div class="skill-item">
-                        <i class="fab fa-html5"></i>
-                        <span>HTML5</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-css3-alt"></i>
-                        <span>CSS3</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-js"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <span>React</span>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Technologies</h3>
-                <div class="skill-items">
-                    <div class="skill-item">
-                        <i class="fab fa-git-alt"></i>
-                        <span>Git</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-code"></i>
-                        <span>VS Code</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2 class="section-title">Contact <span>Me</span></h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>swarnendu.1122das@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+91 8478900839</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Kolkata, India</span>
-                </div>
-            </div>
-            <form class="contact-form">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" autocomplete="name">
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email" autocomplete="email">
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
-                </div>
-                <button type="submit" class="button">Send Message</button>
-            </form>
-        </div>
-    </section>
-
+    <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-left">
-                <h3>Swarnendu Das</h3>
-                <p>Web Developer & Designer</p>
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png" alt="Swarnendu Das" class="logo-img" id="footerLogoImg" onerror="this.src='profile.png'">
+                        <span class="logo-name">Swarnendu Das</span>
+                    </div>
+                    <p class="footer-bio">
+                        Full-Stack Software Developer passionate about building high-performance web systems, scalable backend architectures, and elegant interfaces.
+                    </p>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#skills">Skills &amp; Tech</a></li>
+                        <li><a href="#projects">All Projects</a></li>
+                        <li><a href="#experience">Education</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Featured Projects</h4>
+                    <ul>
+                        <li><a href="https://joblix.vercel.app/" target="_blank" rel="noopener noreferrer">Joblix (Job Portal)</a></li>
+                        <li><a href="https://novacare-frontend.vercel.app/" target="_blank" rel="noopener noreferrer">Novacare (Hospital OS)</a></li>
+                        <li><a href="https://shiftly-pearl.vercel.app/" target="_blank" rel="noopener noreferrer">Shiftly (Logistics Hub)</a></li>
+                        <li><a href="https://github.com/swarnendu11?tab=repositories" target="_blank" rel="noopener noreferrer">All GitHub Repos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Direct Contact</h4>
+                    <p class="footer-contact-item"><i class="fas fa-envelope"></i> swarnendu.1122das@gmail.com</p>
+                    <p class="footer-contact-item"><i class="fas fa-phone"></i> +91 8478900839</p>
+                    <p class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Kolkata, West Bengal, India</p>
+                    <div class="footer-btn-wrap">
+                        <a href="Swarnendu_das.pdf" download="Swarnendu_das.pdf" class="btn btn-secondary btn-sm">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-right">
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Swarnendu Das. All rights reserved.</p>
+                <div class="footer-social-strip">
+                    <a href="https://www.linkedin.com/in/swarnendu36/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/swarnendu11" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/swarnendu1122" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/itz.swarnendu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Swarnendu Das. All rights reserved.</p>
-        </div>
-    </footer> 
+    </footer>
 
+    <!-- RESUME MODAL (In-app preview) -->
+    <div class="modal-backdrop" id="resumeModalBackdrop" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <i class="fas fa-file-pdf text-danger"></i>
+                    <h3>Swarnendu Das &mdash; Resume Preview</h3>
+                </div>
+                <div class="modal-actions">
+                    <a href="Swarnendu_das.pdf" download="Swarnendu_das.pdf" class="btn btn-primary btn-sm">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                    <button class="modal-close-btn" id="closeResumeModalBtn" aria-label="Close modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body modal-pdf-body">
+                <iframe src="Swarnendu_das.pdf" title="Swarnendu Das Resume" class="resume-iframe"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT CASE STUDY MODAL -->
+    <div class="modal-backdrop" id="projectModalBackdrop" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <i class="fas fa-code-branch text-primary"></i>
+                    <h3 id="projectModalTitle">Project Case Study</h3>
+                </div>
+                <button class="modal-close-btn" id="closeProjectModalBtn" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="projectModalBody">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- COMMAND PALETTE MODAL (Ctrl+K) -->
+    <div class="cmd-palette-backdrop" id="cmdPaletteBackdrop" aria-hidden="true">
+        <div class="cmd-palette-dialog">
+            <div class="cmd-palette-header">
+                <i class="fas fa-search cmd-search-icon"></i>
+                <input type="text" id="cmdPaletteInput" class="cmd-input" placeholder="Type a command or section name..." autocomplete="off">
+                <kbd class="cmd-esc-hint" id="cmdCloseEsc">ESC</kbd>
+            </div>
+            <div class="cmd-palette-results" id="cmdPaletteResults">
+                <!-- Navigation items -->
+                <div class="cmd-group-title">Navigation</div>
+                <button class="cmd-item" data-action="goto" data-target="#home"><i class="fas fa-home"></i> Home</button>
+                <button class="cmd-item" data-action="goto" data-target="#about"><i class="fas fa-user"></i> About Me &amp; Highlights</button>
+                <button class="cmd-item" data-action="goto" data-target="#skills"><i class="fas fa-code"></i> Technical Skills Matrix</button>
+                <button class="cmd-item" data-action="goto" data-target="#projects"><i class="fas fa-layer-group"></i> Featured Projects Grid</button>
+                <button class="cmd-item" data-action="goto" data-target="#experience"><i class="fas fa-graduation-cap"></i> Education &amp; Timeline</button>
+                <button class="cmd-item" data-action="goto" data-target="#contact"><i class="fas fa-envelope"></i> Contact &amp; Hire Me</button>
+
+                <div class="cmd-group-title">Quick Actions</div>
+                <button class="cmd-item" data-action="update-photo"><i class="fas fa-camera"></i> Change / Upload Profile Photo</button>
+                <button class="cmd-item" data-action="resume"><i class="fas fa-file-pdf"></i> View Resume (PDF Modal)</button>
+                <button class="cmd-item" data-action="download-resume"><i class="fas fa-download"></i> Download Resume</button>
+                <button class="cmd-item" data-action="copy-email"><i class="fas fa-copy"></i> Copy Email Address</button>
+                <button class="cmd-item" data-action="toggle-theme"><i class="fas fa-adjust"></i> Toggle Dark / Light Theme</button>
+                <button class="cmd-item" data-action="whatsapp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</button>
+                <button class="cmd-item" data-action="instagram"><i class="fab fa-instagram"></i> Follow on Instagram</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Main JavaScript Logic -->
     <script src="Script.js" defer></script>
 </body>
-
 </html>
