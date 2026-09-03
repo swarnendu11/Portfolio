@@ -605,106 +605,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =========================================================================
-    // 14. DYNAMIC PROFILE PHOTO SYNC & DRAG-AND-DROP UPLOAD
+    // 14. PROFILE PHOTO INITIALIZATION
     // =========================================================================
-    const profileImageContainer = document.getElementById("profileImageContainer");
-    const profilePhotoOverlay = document.getElementById("profilePhotoOverlay");
-    const profilePhotoInput = document.getElementById("profilePhotoInput");
-    const profileImgs = document.querySelectorAll(".profile-img, .logo-img");
     const DEFAULT_PROFILE_PHOTO = "https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png";
+    const profileImgs = document.querySelectorAll(".profile-img, .logo-img");
 
-    // Check for cached photo in localStorage or active server profile.png
-    const savedPhoto = localStorage.getItem("swarnendu_profile_photo");
-    if (savedPhoto && savedPhoto.startsWith("data:image/")) {
-        applyPhotoToDOM(savedPhoto);
-    } else {
-        applyPhotoToDOM(DEFAULT_PROFILE_PHOTO);
-    }
-
-    function applyPhotoToDOM(url) {
-        profileImgs.forEach(img => {
-            img.src = url;
-        });
-        const favicon = document.querySelector("link[rel~='icon']");
-        if (favicon) favicon.href = url;
-    }
-
-    function handleFileSelection(file) {
-        if (!file || !file.type.startsWith("image/")) {
-            showToast("Please drop or select a valid image file (PNG, JPG, WebP)");
-            return;
+    profileImgs.forEach(img => {
+        if (!img.getAttribute("src")) {
+            img.src = DEFAULT_PROFILE_PHOTO;
         }
-
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const dataUrl = e.target.result;
-            // 1. Instantly update all profile images across the page (optimistic UI)
-            applyPhotoToDOM(dataUrl);
-
-            // 2. Cache in localStorage for immediate client persistence
-            try {
-                localStorage.setItem("swarnendu_profile_photo", dataUrl);
-            } catch (err) {
-                console.warn("Storage quota exceeded", err);
-            }
-
-            // 3. Persist directly to server /profile.png via API
-            fetch("/api/upload-photo", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ dataUrl: dataUrl })
-            })
-            .then(res => res.json())
-            .then(resData => {
-                if (resData.success) {
-                    showToast("New profile photo applied and saved across portfolio!");
-                }
-            })
-            .catch(err => {
-                console.error("Upload error:", err);
-                showToast("Photo applied locally to portfolio!");
-            });
-        };
-        reader.readAsDataURL(file);
-    }
-
-    if (profilePhotoOverlay && profilePhotoInput) {
-        profilePhotoOverlay.addEventListener("click", (e) => {
-            e.stopPropagation();
-            profilePhotoInput.click();
-        });
-
-        profilePhotoInput.addEventListener("change", (e) => {
-            if (e.target.files && e.target.files[0]) {
-                handleFileSelection(e.target.files[0]);
-            }
-        });
-    }
-
-    if (profileImageContainer) {
-        // Drag and drop events
-        ['dragenter', 'dragover'].forEach(eventName => {
-            profileImageContainer.addEventListener(eventName, (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                profileImageContainer.classList.add("drag-over");
-            }, false);
-        });
-
-        ['dragleave', 'drop'].forEach(eventName => {
-            profileImageContainer.addEventListener(eventName, (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                profileImageContainer.classList.remove("drag-over");
-            }, false);
-        });
-
-        profileImageContainer.addEventListener("drop", (e) => {
-            const dt = e.dataTransfer;
-            if (dt && dt.files && dt.files[0]) {
-                handleFileSelection(dt.files[0]);
-            }
-        }, false);
-    }
+    });
 
 });

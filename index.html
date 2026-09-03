@@ -17,8 +17,9 @@
     <meta property="og:image" content="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png">
-
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dkwauetdi/image/upload/v1788421579/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000-photoaidcom-cropped_tezsym.png">
+    <link rel="shortcut icon" type="image/png" href="https://res.cloudinary.com/dkwauetdi/image/upload/v1788421579/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000-photoaidcom-cropped_tezsym.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dkwauetdi/image/upload/v1788421579/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000-photoaidcom-cropped_tezsym.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,8 +98,14 @@
     <div class="mobile-drawer" id="mobileDrawer">
         <div class="mobile-drawer-header">
             <div class="logo">
-                <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png" alt="Swarnendu Das Logo" class="logo-img" id="drawerLogoImg" onerror="this.src='profile.png'">
-                <span class="logo-name">Swarnendu Das</span>
+                <div class="logo-avatar-wrap">
+                    <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png" alt="Swarnendu Das Logo" class="logo-img" id="drawerLogoImg" onerror="this.src='profile.png'">
+                    <span class="logo-online-badge"></span>
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-name">Swarnendu Das</span>
+                    <span class="logo-title">Software Developer</span>
+                </div>
             </div>
             <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close navigation menu">
                 <i class="fas fa-times"></i>
@@ -228,17 +235,12 @@
                         <!-- Profile Card -->
                         <div class="profile-glow-ring"></div>
                         <div class="profile-card">
-                            <div class="profile-image-container" id="profileImageContainer" title="Drag &amp; drop any of your new photos or click to change">
+                            <div class="profile-image-container" id="profileImageContainer">
                                 <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png" alt="Swarnendu Das - Profile Photo" class="profile-img" id="heroProfileImg" fetchpriority="high" onerror="this.src='profile.png'">
                                 <div class="profile-badge-float">
                                     <i class="fas fa-code"></i>
                                     <span>Full Stack Engineer</span>
                                 </div>
-                                <button type="button" class="profile-photo-overlay" id="profilePhotoOverlay" aria-label="Change profile photo" title="Click or drop your new photo here to update">
-                                    <i class="fas fa-camera"></i>
-                                    <span>Change Photo</span>
-                                </button>
-                                <input type="file" id="profilePhotoInput" accept="image/*" style="display:none;" aria-label="Upload new profile photo">
                             </div>
                             <div class="profile-card-body">
                                 <h3 class="profile-card-name">Swarnendu Das</h3>
@@ -340,60 +342,89 @@
                     <!-- Bio Narrative Column -->
                     <div class="about-narrative-card">
                         <div class="about-narrative-header">
-                            <div class="avatar-badge">
-                                <i class="fas fa-sparkles"></i>
-                            </div>
+                            <div class="avatar-badge">👨‍💻</div>
                             <div>
-                                <h3 class="narrative-headline">Aspiring Software Engineer & Full-Stack Architect</h3>
+                                <h3 class="narrative-headline">Aspiring Software Engineer &amp; Full-Stack Architect 🚀</h3>
                                 <div class="badge-row">
-                                    <span class="pill-badge"><i class="fas fa-university"></i> MCA Student</span>
-                                    <span class="pill-badge"><i class="fas fa-microchip"></i> Tech Enthusiast</span>
-                                    <span class="pill-badge"><i class="fas fa-brain"></i> Problem Solver</span>
-                                    <span class="pill-badge"><i class="fas fa-comments"></i> Strong Communicator</span>
+                                    <span class="pill-badge">🎓 MCA Candidate (CGPA 7.69)</span>
+                                    <span class="pill-badge">⚡ Tech Enthusiast</span>
+                                    <span class="pill-badge">🧩 Problem Solver</span>
+                                    <span class="pill-badge">🗣️ Strong Communicator</span>
+                                    <span class="pill-badge">🛠️ Full-Stack Builder</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="about-text-content">
                             <p>
-                                Hello! I am a software developer currently pursuing my <strong>Master of Computer Applications (MCA)</strong> at Techno College Hooghly (CGPA: 7.69). With a solid foundation in programming and computer science principles, I build end-to-end web applications with clean, scalable, and maintainable architectures.
+                                👋 <strong>Hello!</strong> I am a software developer currently pursuing my <strong>Master of Computer Applications (MCA)</strong> at Techno College Hooghly (CGPA: 7.69). With a solid foundation in programming and computer science principles, I build end-to-end web applications with clean, scalable, and maintainable architectures.
                             </p>
                             <p>
-                                Having honed my frontend expertise in <strong>React, Next.js, and TypeScript</strong>, I have expanded deeply into <strong>Node.js &amp; Express backend development, REST APIs, MySQL, and modern database architectures</strong>.
+                                ⚡ Having honed my frontend expertise in <strong>React, Next.js, and TypeScript</strong>, I have expanded deeply into <strong>Node.js &amp; Express backend development, REST APIs, MySQL, and modern database architectures</strong>.
                             </p>
                             <p>
-                                My journey into technology is distinct: I initially graduated with a <strong>Bachelor of Journalism and Mass Communication (BJMC)</strong> from Chandigarh University. This interdisciplinary foundation empowers me with exceptional technical storytelling, cross-functional collaboration, clear documentation, and user-first empathy that sets me apart in any engineering team.
+                                🎯 <strong>My journey into technology is distinct:</strong> I initially graduated with a <strong>Bachelor of Journalism and Mass Communication (BJMC)</strong> from Chandigarh University. This interdisciplinary foundation empowers me with exceptional technical storytelling, cross-functional collaboration, clear documentation, and user-first empathy that sets me apart in any engineering team.
                             </p>
                         </div>
 
                         <!-- Highlights Grid -->
                         <div class="about-highlights-grid">
-                            <div class="highlight-item">
-                                <div class="highlight-icon"><i class="fas fa-server"></i></div>
-                                <div class="highlight-content">
-                                    <h4>Passionate About Scalable Backend Systems</h4>
+                            <div class="highlight-card">
+                                <div>
+                                    <div class="highlight-header">
+                                        <span class="highlight-emoji">🗄️</span>
+                                        <h4>Scalable Backend Systems</h4>
+                                    </div>
                                     <p>Deep appreciation for modular APIs, asynchronous programming, robust middleware, and relational database modeling with MySQL &amp; MongoDB.</p>
                                 </div>
+                                <div class="highlight-tags">
+                                    <span class="highlight-tag">Node.js</span>
+                                    <span class="highlight-tag">Express</span>
+                                    <span class="highlight-tag">REST APIs</span>
+                                    <span class="highlight-tag">MySQL</span>
+                                </div>
                             </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon"><i class="fas fa-rocket"></i></div>
-                                <div class="highlight-content">
-                                    <h4>Full-Stack Execution</h4>
+                            <div class="highlight-card">
+                                <div>
+                                    <div class="highlight-header">
+                                        <span class="highlight-emoji">🚀</span>
+                                        <h4>Full-Stack Execution</h4>
+                                    </div>
                                     <p>Hands-on building responsive, production-ready apps with Next.js, Clerk authentication, RESTful APIs, and MongoDB/PostgreSQL.</p>
                                 </div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon"><i class="fas fa-lightbulb"></i></div>
-                                <div class="highlight-content">
-                                    <h4>Continuous Learning & Adaptability</h4>
-                                    <p>Constantly exploring modern developer workflows, Docker containerization, system design patterns, and AI-assisted tooling.</p>
+                                <div class="highlight-tags">
+                                    <span class="highlight-tag">Next.js</span>
+                                    <span class="highlight-tag">React</span>
+                                    <span class="highlight-tag">TypeScript</span>
+                                    <span class="highlight-tag">MongoDB</span>
                                 </div>
                             </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon"><i class="fas fa-handshake"></i></div>
-                                <div class="highlight-content">
-                                    <h4>Collaborative & Team-Ready</h4>
+                            <div class="highlight-card">
+                                <div>
+                                    <div class="highlight-header">
+                                        <span class="highlight-emoji">💡</span>
+                                        <h4>Continuous Learning &amp; Adaptability</h4>
+                                    </div>
+                                    <p>Constantly exploring modern developer workflows, Docker containerization, system design patterns, and AI-assisted tooling.</p>
+                                </div>
+                                <div class="highlight-tags">
+                                    <span class="highlight-tag">Docker</span>
+                                    <span class="highlight-tag">System Design</span>
+                                    <span class="highlight-tag">AI Tooling</span>
+                                </div>
+                            </div>
+                            <div class="highlight-card">
+                                <div>
+                                    <div class="highlight-header">
+                                        <span class="highlight-emoji">🤝</span>
+                                        <h4>Collaborative &amp; Team-Ready</h4>
+                                    </div>
                                     <p>Experienced in team-based Git workflows, agile sprint coordination, and turning business requirements into working software.</p>
+                                </div>
+                                <div class="highlight-tags">
+                                    <span class="highlight-tag">Git &amp; GitHub</span>
+                                    <span class="highlight-tag">Agile</span>
+                                    <span class="highlight-tag">Documentation</span>
                                 </div>
                             </div>
                         </div>
@@ -402,38 +433,38 @@
                     <!-- Side Specs Card / Quick Facts -->
                     <div class="about-sidebar">
                         <div class="spec-card">
-                            <h3 class="spec-card-title"><i class="fas fa-id-card"></i> Candidate Summary</h3>
+                            <h3 class="spec-card-title">📋 Candidate Summary</h3>
                             <ul class="spec-list">
                                 <li class="spec-item">
-                                    <span class="spec-key">Name:</span>
+                                    <span class="spec-key">👤 Name:</span>
                                     <span class="spec-val">Swarnendu Das</span>
                                 </li>
                                 <li class="spec-item">
-                                    <span class="spec-key">Current Program:</span>
+                                    <span class="spec-key">🎓 Current Program:</span>
                                     <span class="spec-val">MCA (2024–2026)</span>
                                 </li>
                                 <li class="spec-item">
-                                    <span class="spec-key">University/College:</span>
+                                    <span class="spec-key">🏛️ University/College:</span>
                                     <span class="spec-val">Techno College Hooghly</span>
                                 </li>
                                 <li class="spec-item">
-                                    <span class="spec-key">Academic CGPA:</span>
+                                    <span class="spec-key">📊 Academic CGPA:</span>
                                     <span class="spec-val highlight-val">7.69 / 10.0</span>
                                 </li>
                                 <li class="spec-item">
-                                    <span class="spec-key">Location:</span>
+                                    <span class="spec-key">📍 Location:</span>
                                     <span class="spec-val">Kolkata, West Bengal, India</span>
                                 </li>
                                 <li class="spec-item">
-                                    <span class="spec-key">Relocation / Remote:</span>
-                                    <span class="spec-val">Open to Remote, Hybrid & Relocation</span>
+                                    <span class="spec-key">🌍 Relocation / Remote:</span>
+                                    <span class="spec-val">Open to Remote, Hybrid &amp; Relocation</span>
                                 </li>
                                 <li class="spec-item">
-                                    <span class="spec-key">Primary Focus:</span>
+                                    <span class="spec-key">🎯 Primary Focus:</span>
                                     <span class="spec-val">Full Stack, Node.js Backend, SDE</span>
                                 </li>
                                 <li class="spec-item">
-                                    <span class="spec-key">Languages:</span>
+                                    <span class="spec-key">🗣️ Languages:</span>
                                     <span class="spec-val">English, Bengali, Hindi</span>
                                 </li>
                             </ul>
@@ -450,12 +481,12 @@
 
                         <!-- What I Bring to Your Team Card -->
                         <div class="value-prop-card">
-                            <h4><i class="fas fa-check-circle text-success"></i> Why Hire Me?</h4>
+                            <h4>✨ Why Hire Me?</h4>
                             <ul class="value-prop-list">
-                                <li><i class="fas fa-check"></i> <strong>Dual Skillset:</strong> Frontend design finesse + backend architectural rigor.</li>
-                                <li><i class="fas fa-check"></i> <strong>Fast Ramp-up:</strong> Proven ability to quickly master new frameworks & paradigms.</li>
-                                <li><i class="fas fa-check"></i> <strong>Clean Code Mindset:</strong> Adherence to SOLID principles, DRY, and modular design.</li>
-                                <li><i class="fas fa-check"></i> <strong>Zero Communication Gap:</strong> Articulate, clear, and proactive team contributor.</li>
+                                <li>⚡ <strong>Dual Skillset:</strong> Frontend design finesse + backend architectural rigor.</li>
+                                <li>🚀 <strong>Fast Ramp-up:</strong> Proven ability to quickly master new frameworks &amp; paradigms.</li>
+                                <li>🧱 <strong>Clean Code Mindset:</strong> Adherence to SOLID principles, DRY, and modular design.</li>
+                                <li>💬 <strong>Zero Communication Gap:</strong> Articulate, clear, and proactive team contributor.</li>
                             </ul>
                         </div>
                     </div>
@@ -950,8 +981,8 @@
                         </div>
                         <div class="timeline-content">
                             <div class="timeline-badge-row">
-                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2024 &mdash; 2026 (Pursuing)</span>
-                                <span class="badge-grade">CGPA: 7.69 / 10.0</span>
+                                <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2024 &mdash; 2026</span>
+                                <span class="badge-grade">CGPA: 7.69</span>
                             </div>
                             <h3 class="timeline-title">Master of Computer Applications (MCA)</h3>
                             <h4 class="timeline-org"><i class="fas fa-university"></i> Techno College Hooghly &bull; MAKAUT Affiliated</h4>
@@ -1087,7 +1118,7 @@
                                     <div class="item-icon-wrap"><i class="fas fa-calendar-check"></i></div>
                                     <div class="item-text-wrap">
                                         <span class="item-label">Availability</span>
-                                        <span class="item-value text-success font-medium">Immediate / 2026 Batch Graduate</span>
+                                        <span class="item-value text-success font-medium">Immediate</span>
                                     </div>
                                 </div>
                             </div>
@@ -1171,10 +1202,16 @@
         <div class="container footer-container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <div class="logo">
-                        <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png" alt="Swarnendu Das" class="logo-img" id="footerLogoImg" onerror="this.src='profile.png'">
-                        <span class="logo-name">Swarnendu Das</span>
-                    </div>
+                    <a href="#home" class="logo" aria-label="Swarnendu Das Home">
+                        <div class="logo-avatar-wrap">
+                            <img src="https://res.cloudinary.com/dkwauetdi/image/upload/v1788420366/ChatGPT_Image_Sep_3_2026_12_42_05_PM_2_optimized_1000_djumhy.png" alt="Swarnendu Das" class="logo-img" id="footerLogoImg" onerror="this.src='profile.png'">
+                            <span class="logo-online-badge"></span>
+                        </div>
+                        <div class="logo-text-group">
+                            <span class="logo-name">Swarnendu Das</span>
+                            <span class="logo-title">Software Developer</span>
+                        </div>
+                    </a>
                     <p class="footer-bio">
                         Full-Stack Software Developer passionate about building high-performance web systems, scalable backend architectures, and elegant interfaces.
                     </p>

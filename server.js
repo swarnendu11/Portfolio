@@ -37,13 +37,13 @@ app.get('/api/photo-status', (req, res) => {
   res.json({ exists, url: exists ? '/profile.png' : null });
 });
 
-// Profile image handler: serves uploaded profile.png if exists, else default-avatar.svg
+// Profile image handler: serves profile.png if exists
 app.get('/profile.png', (req, res) => {
   const customProfile = path.join(__dirname, 'profile.png');
   if (fs.existsSync(customProfile)) {
     return res.sendFile(customProfile);
   }
-  return res.sendFile(path.join(__dirname, 'default-avatar.svg'));
+  return res.status(404).send('Profile image not found');
 });
 
 // Serve static assets from project root
